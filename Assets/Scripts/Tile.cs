@@ -4,7 +4,7 @@ public enum TileType
 {
     Floor,
     Wall,
-    Door,
+    Lava,
 }
 
 public class Tile : Tileable

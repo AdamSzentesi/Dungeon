@@ -56,7 +56,8 @@ public class Level : LevelBase
         }
 
         Hero.SetTilePosition(LevelData.StartLocation);
-        //CameraTarget.localPosition = new Vector3(StartLocation.x, StartLocation.y);
+
+        CameraTarget.localPosition = new Vector3(LevelData.Width / 2.0f - 0.5f, LevelData.Height / 2.0f - 0.5f);
     }
 
     public Item PickupItem(Vector2Int tilePosition)

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e95a40666966d4d8abed0d500b2fc6, type: 3}
   m_Name: LevelData1
   m_EditorClassIdentifier: 
+  StartLocation: {x: 4, y: 0}
   _TileProperties:
   - TileType: 0
     ItemType: 0
@@ -19,7 +20,11 @@ MonoBehaviour:
     ItemType: 0
   - TileType: 0
     ItemType: 0
+  - TileType: 1
+    ItemType: 0
   - TileType: 0
+    ItemType: 0
+  - TileType: 1
     ItemType: 0
   - TileType: 0
     ItemType: 0
@@ -33,53 +38,11 @@ MonoBehaviour:
     ItemType: 0
   - TileType: 0
     ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
   - TileType: 0
     ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
   - TileType: 0
     ItemType: 0

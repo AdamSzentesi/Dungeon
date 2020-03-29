@@ -18,5 +18,5 @@ MonoBehaviour:
     IsWall: 0
   - Sprite: {fileID: 21300000, guid: 9f023458136360d4bba47ba0bcf07342, type: 3}
     IsWall: 1
-  - Sprite: {fileID: 0}
+  - Sprite: {fileID: 21300000, guid: 3bb5e5506c840d34ea3169079faa87b2, type: 3}
     IsWall: 1
