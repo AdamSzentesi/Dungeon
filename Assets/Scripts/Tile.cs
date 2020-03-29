@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum TileType
 {
@@ -8,45 +7,40 @@ public enum TileType
     Door,
 }
 
-public class Tile : MonoBehaviour
+public class Tile : Tileable
 {
-    private SpriteRenderer _SpriteRenderer;
-    private Tileset _Tileset;
-
     public TileType TileType;
-    public Vector2Int TilePosition = new Vector2Int(); // TODO: private?
-    
     public bool IsInitialized { get; private set; } = false;
 
-    private void Awake()
-    {
-        _SpriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-
-    public void Init(Vector2Int tilePosition, TileType tileType, Tileset tileset, Transform parentTransform)
+    public void Init(Vector2Int tilePosition, TileType tileType, Transform parentTransform, LevelBase owner)
     {
         if (IsInitialized) return;
 
-        _Tileset = tileset;
         TilePosition = tilePosition;
         transform.SetParent(parentTransform);
         transform.localPosition = new Vector3(TilePosition.x, TilePosition.y, 2.0f);
         TileType = tileType;
+        Owner = owner;
         UpdateSprite();
+
 
         IsInitialized = true;
     }
 
-    // DEBUG
-    private void OnValidate()
+    public void Destroy()
     {
-        if (Application.isPlaying) { UpdateSprite(); }
+        Destroy(gameObject);
     }
 
     private void UpdateSprite()
     {
-        _SpriteRenderer.sprite = _Tileset.GetSprite(TileType);
+        if (!Owner) return;
+        SpriteRenderer.sprite = Owner.GetSprite(TileType);
+    }
+
+    private void OnValidate()
+    {
+        UpdateSprite();
     }
 
 }

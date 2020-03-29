@@ -11,15 +11,13 @@ public enum Direction
     West,
 }
 
-public class Character : MonoBehaviour
+public class Character : Tileable
 {
-    public Vector2Int TilePosition = new Vector2Int();
     public float Speed = 0.5f;
 
     // TODO: inventory
     public bool HasItemKey { get; private set; } = false;
 
-    private SpriteRenderer _SpriteRenderer;
     private Coroutine _MoveCoroutine;
     private bool _IsMoving = false;
     private Direction _CurrentDirection = Direction.North;
@@ -43,9 +41,8 @@ public class Character : MonoBehaviour
         { Direction.West, Direction.North },
     };
 
-    private void Awake()
+    private void Start()
     {
-        _SpriteRenderer = GetComponent<SpriteRenderer>();
         _CurrentDirection = Direction.North;
     }
 

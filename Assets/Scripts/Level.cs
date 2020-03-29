@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Level : MonoBehaviour
+public class Level : LevelBase
 {
     public LevelData LevelData;
     public Vector2Int StartLocation = new Vector2Int();
@@ -41,9 +41,10 @@ public class Level : MonoBehaviour
             {
                 if (!_Tiles[x, y])
                 {
+                    TileType tileType = LevelData.GetTileType(x, y);
                     GameObject newTile = Instantiate(TilePrefab);
                     _Tiles[x, y] = newTile.GetComponent<Tile>();
-                    _Tiles[x, y].Init(new Vector2Int(x, y), LevelData.GetTileType(x, y), Tileset, transform);
+                    _Tiles[x, y].Init(new Vector2Int(x, y), tileType, transform, this);
                 }
 
                 ItemType itemType = LevelData.GetItemType(x, y);
@@ -101,6 +102,11 @@ public class Level : MonoBehaviour
         }
 
         return null;
+    }
+
+    public override Sprite GetSprite(TileType tileType)
+    {
+        return Tileset.GetSprite(tileType);
     }
 
 }

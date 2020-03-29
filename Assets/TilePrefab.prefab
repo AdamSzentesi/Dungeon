@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd782b63950f016418b5629fb7709e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
   TilePosition: {x: 0, y: 0}
+  SpriteRenderer: {fileID: 3267485387900398373}
+  TileType: 0
 --- !u!212 &3267485387900398373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9f023458136360d4bba47ba0bcf07342, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99da6cd2cda5f224a94abea75f0db037, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

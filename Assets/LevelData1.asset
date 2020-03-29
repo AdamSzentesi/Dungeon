@@ -12,6 +12,204 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e95a40666966d4d8abed0d500b2fc6, type: 3}
   m_Name: LevelData1
   m_EditorClassIdentifier: 
-  _TileType: 00000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000010000000100000001000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Width: 8
-  Height: 8
+  _TileProperties:
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
