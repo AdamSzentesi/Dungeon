@@ -11,16 +11,19 @@ public struct TileProperties
 [CreateAssetMenu(fileName = "LevelData", menuName = "Dungeon/LevelData")]
 public class LevelData : ScriptableObject
 {
-    public TileProperties[] _TileProperties;
-
     public int Width { get; private set; } = 10;
     public int Height { get; private set; } = 10;
+    public Vector2Int StartLocation = new Vector2Int();
 
-    public void Setup(int width, int height, TileProperties[] tilePropertiesArray)
+    public TileProperties[] _TileProperties;
+    public Tileset Tileset { get; private set; }
+
+    public void Setup(int width, int height, TileProperties[] tilePropertiesArray, Tileset tileset)
     {
         Width = width;
         Height = height;
         _TileProperties = tilePropertiesArray;
+        Tileset = tileset;
     }
 
     // TODO: check bounds

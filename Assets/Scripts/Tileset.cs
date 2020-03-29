@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [Serializable]
-public struct TileData
+public struct TilesetItem
 {
     public Sprite Sprite;
     public bool IsWall;
@@ -14,7 +14,7 @@ public class Tileset : ScriptableObject
     public Sprite ErrorSprite;
 
     [SerializeField]
-    private TileData[] _TileDataArray = new TileData[Enum.GetNames(typeof(TileType)).Length];
+    private TilesetItem[] _TileDataArray = new TilesetItem[Enum.GetNames(typeof(TileType)).Length];
 
     public Sprite GetSprite(TileType tileType)
     {

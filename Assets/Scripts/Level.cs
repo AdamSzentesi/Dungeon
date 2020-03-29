@@ -3,10 +3,8 @@
 public class Level : LevelBase
 {
     public LevelData LevelData;
-    public Vector2Int StartLocation = new Vector2Int();
     public GameObject TilePrefab;
     public GameObject ItemPrefab;
-    public Tileset Tileset;
     public Itemset Itemset;
     public Hero Hero;
     public Transform CameraTarget;
@@ -57,8 +55,8 @@ public class Level : LevelBase
             }
         }
 
-        Hero.SetTilePosition(StartLocation);
-        CameraTarget.localPosition = new Vector3(StartLocation.x, StartLocation.y);
+        Hero.SetTilePosition(LevelData.StartLocation);
+        //CameraTarget.localPosition = new Vector3(StartLocation.x, StartLocation.y);
     }
 
     public Item PickupItem(Vector2Int tilePosition)
@@ -87,7 +85,7 @@ public class Level : LevelBase
         );
 
         if (isOutsideLevel) return false;
-        if (Tileset.IsWall(_Tiles[tilePosition.x, tilePosition.y].TileType)) return false;
+        if (LevelData.Tileset.IsWall(_Tiles[tilePosition.x, tilePosition.y].TileType)) return false;
 
         return true;
     }
@@ -106,7 +104,7 @@ public class Level : LevelBase
 
     public override Sprite GetSprite(TileType tileType)
     {
-        return Tileset.GetSprite(tileType);
+        return LevelData.Tileset.GetSprite(tileType);
     }
 
 }

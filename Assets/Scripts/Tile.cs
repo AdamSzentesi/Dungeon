@@ -23,7 +23,6 @@ public class Tile : Tileable
         Owner = owner;
         UpdateSprite();
 
-
         IsInitialized = true;
     }
 

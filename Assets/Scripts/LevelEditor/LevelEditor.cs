@@ -135,7 +135,7 @@ public class LevelEditor : LevelBase
             tilePropertiesArray[i].TileType = _TileGridArray._Tiles[i].TileType;
         }
 
-        LevelData.Setup(_TileGridArray.Width, _TileGridArray.Height, tilePropertiesArray);
+        LevelData.Setup(_TileGridArray.Width, _TileGridArray.Height, tilePropertiesArray, Tileset);
     }
 
     public void CreateTile(Vector2Int tilePosition, TileType tileType = TileType.Floor)
