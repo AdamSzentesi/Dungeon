@@ -8,6 +8,8 @@ public class Level : LevelBase
     public Itemset Itemset;
     public Hero Hero;
     public Transform CameraTarget;
+    public GameObject GameOverScreen;
+
     public static Level Instance { get; private set; }
 
     private Tile[,] _Tiles;
@@ -108,6 +110,11 @@ public class Level : LevelBase
     public override Sprite GetSprite(TileType tileType)
     {
         return LevelData.Tileset.GetSprite(tileType);
+    }
+
+    public void GameOver()
+    {
+        GameOverScreen.SetActive(true);
     }
 
     // TileEvent

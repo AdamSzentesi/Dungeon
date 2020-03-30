@@ -14,6 +14,8 @@ public enum Direction
 public class Character : Tileable
 {
     public float Speed = 0.5f;
+    public int Health = 100;
+    public bool IsAlive { get; private set; } = true;
 
     // TODO: inventory
     public bool HasItemKey { get; private set; } = false;
@@ -48,6 +50,7 @@ public class Character : Tileable
 
     private void Update()
     {
+        if (!IsAlive) return;
         if (_IsMoving) return;
 
         if (TryToMove()) return;
@@ -117,9 +120,28 @@ public class Character : Tileable
         }
     }
 
+    private void LateUpdate()
+    {
+        if (Health <= 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 90);
+            IsAlive = false;
+            OnDeath();
+        }
+    }
+
+    public void Die()
+    {
+        Health = 0;
+    }
+
     private void OnDestroy()
     {
         if(_MoveCoroutine != null) StopCoroutine(_MoveCoroutine);
     }
+
+    // Events
+
+    protected virtual void OnDeath() { }
 
 }

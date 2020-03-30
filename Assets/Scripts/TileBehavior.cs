@@ -1,10 +1,5 @@
-﻿using UnityEngine;
-
-public class TileBehavior
+﻿public abstract class TileBehavior
 {
-    public void Execute(Character character, Tile tile)
-    {
-        Debug.Log("AHOJ!");
-    }
+    public abstract void Execute(Character character, Tile tile);
 
 }

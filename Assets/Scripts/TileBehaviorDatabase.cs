@@ -6,7 +6,7 @@ public static class TileBehaviorDatabase
     
     public static void Init()
     {
-        _TileBehaviorFactories[(int)TileType.Floor, (int)TileEvent.OnEnter] = new TileBehaviorFactory<TileBehavior>();
+        _TileBehaviorFactories[(int)TileType.Lava, (int)TileEvent.OnEnter] = new TileBehaviorFactory<KillTileBehavior>();
     }
 
     public static TileBehavior CreateTileBehavior(TileType tileType, TileEvent tileEvent)
