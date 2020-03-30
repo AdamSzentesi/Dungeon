@@ -10,111 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15e95a40666966d4d8abed0d500b2fc6, type: 3}
-  m_Name: LevelData1
+  m_Name: LevelData3
   m_EditorClassIdentifier: 
-  Width: 9
-  Height: 9
-  StartLocation: {x: 4, y: 0}
+  Width: 10
+  Height: 10
+  StartLocation: {x: 0, y: 0}
   TileProperties:
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
   - TileType: 1
     ItemType: 0
-  - TileType: 0
-    ItemType: 0
   - TileType: 1
     ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
   - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 1
-    ItemType: 0
-  - TileType: 0
     ItemType: 0
   - TileType: 1
     ItemType: 0
@@ -124,11 +32,9 @@ MonoBehaviour:
     ItemType: 0
   - TileType: 1
     ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
   - TileType: 1
     ItemType: 0
@@ -150,6 +56,142 @@ MonoBehaviour:
     ItemType: 0
   - TileType: 1
     ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 1
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
+  - TileType: 0
+    ItemType: 0
   - TileType: 0
     ItemType: 0
   - TileType: 1
@@ -160,22 +202,18 @@ MonoBehaviour:
     ItemType: 0
   - TileType: 1
     ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
-    ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
   - TileType: 1
     ItemType: 0
-  - TileType: 2
+  - TileType: 1
     ItemType: 0
   - TileType: 1
     ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
-  - TileType: 0
+  - TileType: 1
     ItemType: 0
   Tileset: {fileID: 11400000, guid: ca6531cbc8363414db9425bf20843846, type: 2}

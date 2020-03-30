@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ErrorSprite: {fileID: 21300000, guid: 99da6cd2cda5f224a94abea75f0db037, type: 3}
   _TileDataArray:
-  - Sprite: {fileID: 21300000, guid: d3262934eafafc344859ea2991974e63, type: 3}
-    IsWall: 0
   - Sprite: {fileID: 21300000, guid: 9f023458136360d4bba47ba0bcf07342, type: 3}
+    IsWall: 0
+  - Sprite: {fileID: 21300000, guid: d3262934eafafc344859ea2991974e63, type: 3}
     IsWall: 1
   - Sprite: {fileID: 21300000, guid: 3bb5e5506c840d34ea3169079faa87b2, type: 3}
     IsWall: 0
