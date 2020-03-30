@@ -7,8 +7,9 @@ public class Level : LevelBase
     public GameObject ItemPrefab;
     public Itemset Itemset;
     public Hero Hero;
-    public Transform CameraTarget;
+    public CameraController CameraController;
     public GameObject GameOverScreen;
+    public Cursor Cursor;
 
     public static Level Instance { get; private set; }
 
@@ -61,7 +62,22 @@ public class Level : LevelBase
 
         Hero.SetTilePosition(LevelData.StartLocation);
 
-        CameraTarget.localPosition = new Vector3(LevelData.Width / 2.0f - 0.5f, LevelData.Height / 2.0f - 0.5f);
+        CameraController.SetLocalPosition(new Vector3(LevelData.Width / 2.0f - 0.5f, LevelData.Height / 2.0f - 0.5f));
+    }
+
+    private void Update()
+    {
+        Cursor.SetTilePosition(CursorTilePosition);
+    }
+
+    private Vector2Int CursorTilePosition
+    {
+        get
+        {
+            Vector3 worldPosition = CameraController.Camera.ScreenToWorldPoint(InputManager.MouseScreenPosition);
+            worldPosition -= transform.position;
+            return new Vector2Int(Mathf.RoundToInt(worldPosition.x), Mathf.RoundToInt(worldPosition.y));
+        }
     }
 
     public Item PickupItem(Vector2Int tilePosition)

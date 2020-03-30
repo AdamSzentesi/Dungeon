@@ -105,6 +105,7 @@ public class Character : Tileable
         _IsMoving = false;
     }
 
+    // TODO: this should be in Tileable
     public void SetTilePosition(Vector2Int desiredTilePosition)
     {
         Level.Instance.Dispatch(TileEvent.OnEnter, desiredTilePosition, this);
