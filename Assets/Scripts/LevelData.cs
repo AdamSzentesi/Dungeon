@@ -20,7 +20,10 @@ public class LevelData : ScriptableObject
 
     private void Awake()
     {
-        TileProperties = new TileProperties[Width * Height];
+        if (TileProperties == null)
+        {
+            TileProperties = new TileProperties[Width * Height];
+        }
     }
 
     public void StoreData(int width, int height, TileProperties[] tilePropertiesArray, Tileset tileset)
@@ -44,7 +47,6 @@ public class LevelData : ScriptableObject
     public TileType GetTileType(int x, int y)
     {
         int index = Width * y + x;
-        Debug.Log("tile " + x + ", " + y + " - " + index + " " + TileProperties[index].TileType);
         return TileProperties[index].TileType;
     }
 
