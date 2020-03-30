@@ -158,4 +158,6 @@ public class LevelEditor : LevelBase
         }
     }
 
+    public override void Dispatch(TileEvent tileEvent, Vector2Int desiredTilePosition, Character character) { }
+    
 }

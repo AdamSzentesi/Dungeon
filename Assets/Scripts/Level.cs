@@ -30,6 +30,8 @@ public class Level : LevelBase
         Tile prefabTile = TilePrefab.GetComponent<Tile>();
         if (!prefabTile) return;
 
+        TileBehaviorDatabase.Init();
+
         _Tiles = new Tile[LevelData.Width, LevelData.Height];
         _Items = new Item[LevelData.Width, LevelData.Height];
 
@@ -106,6 +108,13 @@ public class Level : LevelBase
     public override Sprite GetSprite(TileType tileType)
     {
         return LevelData.Tileset.GetSprite(tileType);
+    }
+
+    // TileEvent
+
+    public override void Dispatch(TileEvent tileEvent, Vector2Int desiredTilePosition, Character character)
+    {
+        _Tiles[desiredTilePosition.x, desiredTilePosition.y].OnTileEvent(tileEvent, character);
     }
 
 }

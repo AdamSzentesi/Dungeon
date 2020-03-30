@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public enum TileType
 {
@@ -7,10 +8,17 @@ public enum TileType
     Lava,
 }
 
+public enum TileEvent
+{
+    OnEnter,
+}
+
 public class Tile : Tileable
 {
     public TileType TileType;
     public bool IsInitialized { get; private set; } = false;
+
+    private TileBehavior[] _TileBehaviors = new TileBehavior[Enum.GetNames(typeof(TileEvent)).Length];
 
     public void Init(Vector2Int tilePosition, TileType tileType, Transform parentTransform, LevelBase owner)
     {
@@ -21,9 +29,25 @@ public class Tile : Tileable
         transform.localPosition = new Vector3(TilePosition.x, TilePosition.y, 2.0f);
         TileType = tileType;
         Owner = owner;
+
         UpdateSprite();
+        LoadTileBehaviors();
 
         IsInitialized = true;
+    }
+
+    private void LoadTileBehaviors()
+    {
+        foreach (TileEvent tileEvent in Enum.GetValues(typeof(TileEvent)))
+        {
+            _TileBehaviors[(int)tileEvent] = TileBehaviorDatabase.CreateTileBehavior(TileType, tileEvent);
+        }
+    }
+
+    public void OnTileEvent(TileEvent tileEvent, Character character)
+    {
+        TileBehavior tileBehavior = _TileBehaviors[(int)tileEvent];
+        if (tileBehavior != null) tileBehavior.Execute(character, this);
     }
 
     public void Destroy()

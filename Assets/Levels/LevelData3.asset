@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Width: 10
   Height: 10
-  StartLocation: {x: 0, y: 0}
+  StartLocation: {x: 2, y: 3}
   TileProperties:
   - TileType: 1
     ItemType: 0

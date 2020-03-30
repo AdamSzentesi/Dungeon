@@ -104,6 +104,8 @@ public class Character : Tileable
 
     public void SetTilePosition(Vector2Int desiredTilePosition)
     {
+        Level.Instance.Dispatch(TileEvent.OnEnter, desiredTilePosition, this);
+
         TilePosition = desiredTilePosition;
         transform.localPosition = new Vector3(TilePosition.x, TilePosition.y);
 
