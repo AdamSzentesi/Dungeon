@@ -69,7 +69,8 @@ public class Character : Tileable
         Vector2Int desiredDirectionVector = _DirectionVectors[_CurrentDirection];
         Vector2Int desiredTilePosition = TilePosition + desiredDirectionVector;
 
-        if (Level.Instance.IsTilePositionValid(desiredTilePosition))
+        // TODO: this has to be solved by TileBevaior
+        if (Level.Instance.IsTilePositionValidFloor(desiredTilePosition))
         {
             // TODO: inventory
             Item item = Level.Instance.GetBlockingItem(desiredTilePosition);

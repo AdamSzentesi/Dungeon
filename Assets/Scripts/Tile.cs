@@ -50,6 +50,12 @@ public class Tile : Tileable
         if (tileBehavior != null) tileBehavior.Execute(character, this);
     }
 
+    public void SetTileType(TileType tileType)
+    {
+        TileType = tileType;
+        UpdateSprite();
+    }
+
     public void Destroy()
     {
         Destroy(gameObject);

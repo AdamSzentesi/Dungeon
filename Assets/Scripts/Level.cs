@@ -67,10 +67,34 @@ public class Level : LevelBase
 
     private void Update()
     {
-        Cursor.SetTilePosition(CursorTilePosition);
+        Vector2Int tilePosition = ComputeCursorTilePosition;
+
+        if (IsTilePositionValid(tilePosition))
+        {
+            Cursor.SetTilePosition(tilePosition);
+        }
+
+        if (InputManager.GetActionUp(InputAction.ChaneTileType))
+        {
+            Tile tile = GetTile(Cursor.TilePosition);
+            if (tile)
+            {
+                tile.SetTileType(TileType.Wall);
+            }
+        }
     }
 
-    private Vector2Int CursorTilePosition
+    private Tile GetTile(Vector2Int tilePosition)
+    {
+        if (IsTilePositionValid(tilePosition))
+        {
+            return _Tiles[tilePosition.x, tilePosition.y];
+        }
+
+        return null;
+    }
+
+    private Vector2Int ComputeCursorTilePosition
     {
         get
         {
@@ -97,7 +121,7 @@ public class Level : LevelBase
 
     public bool IsTilePositionValid(Vector2Int tilePosition)
     {
-        bool isOutsideLevel = 
+        bool isOutsideLevel =
         (
             tilePosition.x < 0
             || tilePosition.x >= LevelData.Width
@@ -105,7 +129,12 @@ public class Level : LevelBase
             || tilePosition.y >= LevelData.Height
         );
 
-        if (isOutsideLevel) return false;
+        return !isOutsideLevel;
+    }
+
+    public bool IsTilePositionValidFloor(Vector2Int tilePosition)
+    {
+        if (!IsTilePositionValid(tilePosition)) return false;
         if (LevelData.Tileset.IsWall(_Tiles[tilePosition.x, tilePosition.y].TileType)) return false;
 
         return true;
