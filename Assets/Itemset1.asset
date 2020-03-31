@@ -23,3 +23,6 @@ MonoBehaviour:
   - Sprite: {fileID: 21300000, guid: 62be36807725bff478d38d35edc37245, type: 3}
     IsPickup: 0
     IsBlocking: 1
+  - Sprite: {fileID: 21300000, guid: 1579eab4636b6a54a828e46a38d32105, type: 3}
+    IsPickup: 0
+    IsBlocking: 0

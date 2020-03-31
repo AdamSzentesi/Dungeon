@@ -54,6 +54,8 @@ public class LevelEditor : LevelBase
 
     public GameObject TilePrefab;
     public Tileset Tileset;
+    public Vector2Int EntranceTilePosition;
+    public Vector2Int ExitTilePosition;
     public GridArray _TileGridArray = new GridArray();
     
     private void OnValidate()
@@ -96,6 +98,9 @@ public class LevelEditor : LevelBase
                 }
             }
 
+            EntranceTilePosition = LevelData.EntranceTilePosition;
+            ExitTilePosition = LevelData.ExitTilePosition;
+
             //_Tiles.DebugPrint();
         }
     }
@@ -135,7 +140,9 @@ public class LevelEditor : LevelBase
             tilePropertiesArray[i].TileType = _TileGridArray._Tiles[i].TileType;
         }
 
-        LevelData.StoreData(_TileGridArray.Width, _TileGridArray.Height, tilePropertiesArray, Tileset);
+        tilePropertiesArray[LevelData.Width * ExitTilePosition.y + ExitTilePosition.x].ItemType = ItemType.Exit;
+
+        LevelData.StoreData(_TileGridArray.Width, _TileGridArray.Height, tilePropertiesArray, Tileset, EntranceTilePosition, ExitTilePosition);
     }
 
     public void CreateTile(Vector2Int tilePosition, TileType tileType = TileType.Floor)

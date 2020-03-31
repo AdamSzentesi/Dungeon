@@ -5,6 +5,7 @@ public enum ItemType
     None,
     Key,
     Lock,
+    Exit,
 }
 
 public class Item : Tileable

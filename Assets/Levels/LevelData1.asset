@@ -141,7 +141,7 @@ MonoBehaviour:
   - TileType: 0
     ItemType: 0
   - TileType: 0
-    ItemType: 0
+    ItemType: 3
   - TileType: 0
     ItemType: 0
   - TileType: 0
@@ -179,3 +179,5 @@ MonoBehaviour:
   - TileType: 0
     ItemType: 0
   Tileset: {fileID: 11400000, guid: ca6531cbc8363414db9425bf20843846, type: 2}
+  EntranceTilePosition: {x: 4, y: 0}
+  ExitTilePosition: {x: 8, y: 6}

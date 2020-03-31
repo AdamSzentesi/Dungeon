@@ -60,7 +60,7 @@ public class Level : LevelBase
             }
         }
 
-        Hero.SetTilePosition(LevelData.StartLocation);
+        Hero.SetTilePosition(LevelData.EntranceTilePosition);
 
         CameraController.SetLocalPosition(new Vector3(LevelData.Width / 2.0f - 0.5f, LevelData.Height / 2.0f - 0.5f));
     }

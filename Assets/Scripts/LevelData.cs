@@ -14,9 +14,10 @@ public class LevelData : ScriptableObject
 {
     public int Width = 10;
     public int Height = 10;
-    public Vector2Int StartLocation = new Vector2Int();
     public TileProperties[] TileProperties;
     public Tileset Tileset;
+    public Vector2Int EntranceTilePosition;
+    public Vector2Int ExitTilePosition;
 
     private void Awake()
     {
@@ -26,11 +27,14 @@ public class LevelData : ScriptableObject
         }
     }
 
-    public void StoreData(int width, int height, TileProperties[] tilePropertiesArray, Tileset tileset)
+    public void StoreData(int width, int height, TileProperties[] tilePropertiesArray, Tileset tileset, Vector2Int entranceTilePosition, Vector2Int exitTilePosition)
     {
         Width = width;
         Height = height;
         Tileset = tileset;
+        EntranceTilePosition = entranceTilePosition;
+        ExitTilePosition = exitTilePosition;
+
         TileProperties = tilePropertiesArray;
 
         EditorUtility.SetDirty(this);
