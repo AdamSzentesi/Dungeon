@@ -11,6 +11,7 @@ public enum TileType
 public enum TileEvent
 {
     OnEnter,
+    OnDesire,
 }
 
 public class Tile : Tileable
@@ -50,10 +51,12 @@ public class Tile : Tileable
         if (tileBehavior != null) tileBehavior.Execute(character, this);
     }
 
+    // TODO: this might be a bad idea: I better make some prefabs and swap them
     public void SetTileType(TileType tileType)
     {
         TileType = tileType;
         UpdateSprite();
+        LoadTileBehaviors();
     }
 
     public void Destroy()

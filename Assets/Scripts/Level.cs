@@ -132,14 +132,6 @@ public class Level : LevelBase
         return !isOutsideLevel;
     }
 
-    public bool IsTilePositionValidFloor(Vector2Int tilePosition)
-    {
-        if (!IsTilePositionValid(tilePosition)) return false;
-        if (LevelData.Tileset.IsWall(_Tiles[tilePosition.x, tilePosition.y].TileType)) return false;
-
-        return true;
-    }
-
     public Item GetBlockingItem(Vector2Int tilePosition)
     {
         Item item = _Items[tilePosition.x, tilePosition.y];

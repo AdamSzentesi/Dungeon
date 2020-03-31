@@ -24,7 +24,9 @@ public class Character : Tileable
     private bool _IsMoving = false;
     private Direction _CurrentDirection = Direction.North;
     public Vector2Int _CurrentDirectionVector = new Vector2Int();
-    
+
+    private bool _IsStopped = false;
+
     private static Dictionary<Direction, Vector2Int>  _DirectionVectors = new Dictionary<Direction, Vector2Int>
     {
         { Direction.None, new Vector2Int(0, 0) },
@@ -69,21 +71,25 @@ public class Character : Tileable
         Vector2Int desiredDirectionVector = _DirectionVectors[_CurrentDirection];
         Vector2Int desiredTilePosition = TilePosition + desiredDirectionVector;
 
-        // TODO: this has to be solved by TileBevaior
-        if (Level.Instance.IsTilePositionValidFloor(desiredTilePosition))
-        {
-            // TODO: inventory
-            Item item = Level.Instance.GetBlockingItem(desiredTilePosition);
-            if (item)
-            {
-                if (!item.Interact(this)) return false;
-            }
+        if (!Level.Instance.IsTilePositionValid(desiredTilePosition)) return false;
 
-            _MoveCoroutine = StartCoroutine(MoveCouroutine(desiredTilePosition));
-            return true;
+        Level.Instance.Dispatch(TileEvent.OnDesire, desiredTilePosition, this);
+
+        if (_IsStopped)
+        {
+            _IsStopped = false;
+            return false;
         }
 
-        return false;
+        // TODO: inventory
+        Item item = Level.Instance.GetBlockingItem(desiredTilePosition);
+        if (item)
+        {
+            if (!item.Interact(this)) return false;
+        }
+
+        _MoveCoroutine = StartCoroutine(MoveCouroutine(desiredTilePosition));
+        return true;
     }
 
     private IEnumerator MoveCouroutine(Vector2Int desiredTilePosition)
@@ -131,6 +137,11 @@ public class Character : Tileable
     public void Die()
     {
         Health = 0;
+    }
+
+    public void Stop()
+    {
+        _IsStopped = true;
     }
 
     private void OnDestroy()
