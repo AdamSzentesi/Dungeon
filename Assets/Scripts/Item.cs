@@ -20,7 +20,7 @@ public class Item : Tileable
         transform.SetParent(parentTransform);
         transform.localPosition = new Vector3(TilePosition.x, TilePosition.y, 1.0f);
         ItemType = itemType;
-        SpriteRenderer.sprite = sprite;
+        TileSpriteRenderer.sprite = sprite;
 
         IsInitialized = true;
     }

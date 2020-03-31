@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TilePosition: {x: 0, y: 0}
-  SpriteRenderer: {fileID: 9202096761713755717}
+  TileSpriteRenderer: {fileID: 9202096761713755717}
+  PulseFrequency: 2
 --- !u!212 &9202096761713755717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TilePosition: {x: 0, y: 0}
-  SpriteRenderer: {fileID: 0}
+  TileSpriteRenderer: {fileID: 9217864463922715616}
   Speed: 1
   Health: 100
   _CurrentDirectionVector: {x: 0, y: 0}

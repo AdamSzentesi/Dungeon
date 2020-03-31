@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TilePosition: {x: 0, y: 0}
-  SpriteRenderer: {fileID: 8117418494850973115}
+  TileSpriteRenderer: {fileID: 8117418494850973115}
   ItemType: 0
 --- !u!212 &8117418494850973115
 SpriteRenderer:

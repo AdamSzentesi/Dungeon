@@ -106,13 +106,9 @@ public class Character : Tileable
         _IsMoving = false;
     }
 
-    // TODO: this should be in Tileable
-    public void SetTilePosition(Vector2Int desiredTilePosition)
+    protected override void OnTilePositionChange()
     {
-        Level.Instance.Dispatch(TileEvent.OnEnter, desiredTilePosition, this);
-
-        TilePosition = desiredTilePosition;
-        transform.localPosition = new Vector3(TilePosition.x, TilePosition.y);
+        Level.Instance.Dispatch(TileEvent.OnEnter, TilePosition, this);
 
         // TODO: inventory
         Item pickup = Level.Instance.PickupItem(TilePosition);

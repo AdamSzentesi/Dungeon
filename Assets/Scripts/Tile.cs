@@ -64,7 +64,7 @@ public class Tile : Tileable
     private void UpdateSprite()
     {
         if (!Owner) return;
-        SpriteRenderer.sprite = Owner.GetSprite(TileType);
+        TileSpriteRenderer.sprite = Owner.GetSprite(TileType);
     }
 
     private void OnValidate()
