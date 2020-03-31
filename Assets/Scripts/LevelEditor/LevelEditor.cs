@@ -140,7 +140,7 @@ public class LevelEditor : LevelBase
             tilePropertiesArray[i].TileType = _TileGridArray._Tiles[i].TileType;
         }
 
-        tilePropertiesArray[LevelData.Width * ExitTilePosition.y + ExitTilePosition.x].ItemType = ItemType.Exit;
+        tilePropertiesArray[_TileGridArray.Width * ExitTilePosition.y + ExitTilePosition.x].ItemType = ItemType.Exit;
 
         LevelData.StoreData(_TileGridArray.Width, _TileGridArray.Height, tilePropertiesArray, Tileset, EntranceTilePosition, ExitTilePosition);
     }

@@ -5,7 +5,6 @@ using UnityEngine;
 public struct TilesetItem
 {
     public Sprite Sprite;
-    public bool IsWall;
 }
 
 [CreateAssetMenu(fileName = "Tileset", menuName = "Dungeon/Tileset")]
@@ -23,11 +22,6 @@ public class Tileset : ScriptableObject
         if (!result) { result = ErrorSprite; }
         
         return result;
-    }
-
-    public bool IsWall(TileType tileType)
-    {
-        return _TileDataArray[(int)tileType].IsWall;
     }
 
 }
